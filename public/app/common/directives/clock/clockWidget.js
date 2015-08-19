@@ -9,14 +9,19 @@
             link: function (scope, element, attr, ctrl ) {
 
                 function startTime() {
-                    var today=new Date();
+                    var today = new Date();
 
                     scope.hour = today.getHours();
                     scope.min = today.getMinutes();
                     scope.sec = today.getSeconds();
-                    scope.min = checkTime(m);
-                    scope.sec = checkTime(s);
-                    var t = setTimeout(function(){startTime()
+                    scope.min = checkTime(scope.min);
+                    scope.sec = checkTime(scope.sec);
+                    var t = setTimeout(function(){
+                        /** $apply() tells Angular that you
+                         * are changing some models and it
+                         * should fire the watchers so that your changes
+                         * propagate properly. **/
+                        scope.$apply(startTime());
                         console.log(t);
                     },500);
                 }
