@@ -14,5 +14,5 @@ Nearsoft angular workshop, intro to angular.
 2. Have [Node](https://nodejs.org/) installed.
 3. Clone this repo.
 4. Go into the root directory type : "npm install"
-5. Then: "bower install"
-6. Last: "gulp webserver"
+5. Install Bower Globaly:"npm install -g bower", then  "bower install"
+6. Install Gulp GLobaly:"npm install -g gulp",then  "gulp webserver"
