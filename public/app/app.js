@@ -30,6 +30,10 @@
                 url: '/part2',
                 templateUrl: 'app/components/intro/slides/part2.tpl.html'
             })
+            .state('intro.part3', {
+                url: '/part3',
+                templateUrl: 'app/components/intro/slides/part3.tpl.html'
+            })
             .state('intro.databinding', {
                 url: '/databinding',
                 templateUrl: 'app/components/intro/examples/databinding/databinding.tpl.html',
@@ -71,6 +75,10 @@
             .state('directives.isolate_scope', {
                 url: '/isolate_scope',
                 templateUrl: 'app/components/directives/isolate_scope.tpl.html',
+            })
+            .state('directives.clock', {
+                url: '/clock',
+                templateUrl: 'app/components/directives/clock.tpl.html',
             });
 
         /** Default Landing Page **/

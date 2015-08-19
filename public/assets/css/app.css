@@ -34,6 +34,11 @@ p {
   color: grey;
 }
 
+pre {
+    border: 1px solid grey;
+    margin: 2px;
+}
+
 h1,h2,h3,h4,h5, h6 {
   color: #FF0063;
   text-shadow: 3px 3px 0px #CACACA;

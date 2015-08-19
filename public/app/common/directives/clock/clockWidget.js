@@ -1,9 +1,10 @@
 (function (angular) {
     angular
         .module('app.directives')
-        .directive('myCustomer', function() {
+        .directive('clockWidget', function() {
           return {
-            restrict: 'E',
+            restrict: 'EA',
+            scope   : {},
             templateUrl: 'app/common/directives/clock/clock.html',
             link: function (scope, element, attr, ctrl ) {
 
@@ -15,7 +16,9 @@
                     scope.sec = today.getSeconds();
                     scope.min = checkTime(m);
                     scope.sec = checkTime(s);
-                    var t = setTimeout(function(){startTime()},500);
+                    var t = setTimeout(function(){startTime()
+                        console.log(t);
+                    },500);
                 }
 
                 function checkTime(i) {
@@ -27,8 +30,3 @@
           };
         });
 })(angular);
-
-
-// scope: {
-// customerInfo: '=info'
-// },

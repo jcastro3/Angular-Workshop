@@ -1,0 +1,64 @@
+<div class="circle-btn-left" ui-sref="intro.part2">
+  <i class="fa fa-angle-left"></i>
+</div>
+
+<div class=" pure-g welcome--subjects">
+  <div class="pure-u-1-2">
+     <h6>Create a module</h6>
+     <pre>
+         angular
+              .module('app_name', []);
+          angular
+              .module('app_name');
+      </pre>
+      <h6>Create Controller</h6>
+      <pre>
+        angular
+            .module('app_name')
+            .controller('AppCtrl', function ($scope) {
+                    //logic
+            });
+
+
+        angular
+            .module('app_name')
+            .controller('AppCtrl', AppCtrl);
+
+        AppCtrl.$inject = ['$scope'];
+        function AppCtrl() {
+            //logic here
+        }
+
+      </pre>
+  </div>
+  <div class="pure-u-1-2">
+    <h6>Create Service</h6>
+    <pre>
+        angular
+            .module('app_name')
+            .service('service_name', function() {
+                this.meth = fn() {
+
+                }
+            })
+    </pre>
+    <h6>Create a Factory</h6>
+    <pre>
+        angular
+            .module('app_name')
+            .factory('service_name', function() {
+
+                return {
+                    meth: meth
+                }
+
+                fn meth() {
+
+                }
+            })
+    </pre>
+  </div>
+</div>
+<div class="circle-btn-right" ui-sref="intro.databinding">
+  <i class="fa fa-angle-right"></i>
+</div>
