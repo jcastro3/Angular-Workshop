@@ -1,0 +1,40 @@
+<h2 class="center-txt">Directives</h2>
+<div class="pure-g">
+    <div class="pure-u-1-3">
+        <h6>Declare directives by:</h6>
+
+<pre class="center-txt">
+< directive >            //Element
+< div directive>         //Atribute
+< div class="directive"> //Class
+</pre>
+    </div>
+    <div class="pure-u-2-3">
+
+        <pre>
+            angular
+                .module(app_name)
+                .directive(directive_name, directive_name);
+
+            directive_name.$inject = [dependencies];
+
+            function directive_name(dependencies) {
+                return {
+                    controller: 'nameCtrl'
+                    require: '^', //requires other directives Ctrl
+                    scope: false, //default receives sames scope as its parent
+                    scope: true, //creates own scope has access to parent
+                    scope : {     //Isolate scope
+                        two-way: '=',
+                        meth-bind: '&',
+                        read-only: '@'
+                    }
+                    link: function(scope, element, attr, ctrl) {
+
+                    }
+                }
+
+            }
+        </pre>
+    </div>
+</div>

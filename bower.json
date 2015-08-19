@@ -1,0 +1,24 @@
+{
+  "name": "Angular-Worshop",
+  "version": "0.0.0",
+  "directory": "app/vendor",
+  "authors": [
+    "Jesus Castro <jcastro@nearsoft.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.4"
+  },
+  "devDependencies": {
+    "angular-ui-router": "~0.2.15",
+    "material-design-lite": "~1.0.2",
+    "pure": "~0.6.0"
+  }
+}

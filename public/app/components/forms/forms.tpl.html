@@ -1,0 +1,51 @@
+<div class="circle-btn-left" ui-sref="intro.hide">
+  <i class="fa fa-angle-left"></i>
+</div>
+ <!--
+ * Within Angular, every form element is also a directive
+ * whose primary purpose is to instantiate a FormController
+ * object, attach it to the form element and, if the form
+ * is named, register that form controller on the parent
+ * scope so that it can be more easily accessed.”
+ -->
+    <h2 class="center-txt"> Form Validation </h2>
+
+        <div class="pure-g">
+
+            <div class="pure-u-1-2">
+                <form name="demoForm" action="" ng-submit="sendRequest()" class="pure-form" novalidate>
+                    <fieldset class="pure-group">
+
+                        <label for="name">Name: </label>
+                        <input type="text" name="name" ng-model="form.name" require>
+
+                        <label for="Email">Email: </label>
+                        <input type="email" name="email" ng-model="form.email" require>
+
+                        <label for="password">Password: </label>
+                        <input type="password" name="password" ng-model="form.password" ng-minlength=8 require>
+                        <span ng-show="demoForm.password.$error.minlength"> Password must be at leat 8 char in length</span>
+
+                    </fieldset>
+                    <input type="submit" class="pure-button">
+
+                </form>
+            </div>
+
+            <div class="pure-u-1-2">
+                <div>
+                    <pre>Name <span style="color:green">$pristine</span> value = {{demoForm.name.$pristine}}</pre>
+                </div>
+                <div>
+                    <pre>Name <span style="color:purple">$dirty</span> value    = {{demoForm.name.$dirty}}</pre>
+                </div>
+                <div>
+                    <pre>Name <span style="color: red">$invalid</span> value  = {{demoForm.name.$invalid}}</pre>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>

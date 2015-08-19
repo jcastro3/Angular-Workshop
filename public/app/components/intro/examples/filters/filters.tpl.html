@@ -1,0 +1,87 @@
+<div class="circle-btn-left" ui-sref="intro.repeat">
+  <i class="fa fa-angle-left"></i>
+</div>
+
+<h2 > Filters</h2>
+
+    <div class="pure-g">
+
+        <div class="pure-u-1-4">
+
+            <h6>Search</h6>
+
+            <input type="text" ng-model="houseSearch">
+
+            <ul>
+               <li ng-repeat="house in houses | filter:houseSearch">
+
+                 {{ house }}
+
+               </li>
+            </ul>
+
+        </div>
+
+
+        <div class="pure-u-1-4">
+
+            <h6>Currency</h6>
+
+            <span>Bono: </span>
+
+            <input type="text"
+                   placeholder="Presupuesto pal bono"
+                   ng-model="presupuesto">
+
+            <div>
+
+              {{ presupuesto | currency }}
+
+            </div>
+
+            <div ng-hide="checkBono()">
+
+                <img src="http://bunkerpop.mx/wp-content/uploads/2014/09/Bono-face-4.jpg" alt="">
+
+            </div>
+
+        </div>
+
+
+
+        <div class="pure-u-1-4">
+
+            <h6>Custom Filter</h6>
+
+            <span>Female</span>
+            <ul>
+                <li ng-repeat="female in people | Gender : 'female'"> {{ female }}</li>
+            </ul>
+
+            <span>Male</span>
+            <ul>
+                <li ng-repeat=" male in people | Gender : 'male'">{{ male }}</li>
+            </ul>
+        </div>
+
+
+        <!--*********   TRY IT YOURSELF  **********-->
+        <div class="pure-u-1-4">
+            <!--
+                TODO:
+                 * Extend the PeopleService, add a GET function that returns a json.
+                 * You can use http://www.json-generator.com/ generate a stub.
+                 * Create a new $scope.___ variable to expose the model to the view.
+                 * Use ng-repeat to show the new model in the view
+                 * Add a filter(or make your own custom filter).
+                 * Extra: Delete elements from the list.
+            -->
+
+        </div>
+
+    </div>
+</div>
+
+<div class="circle-btn-right" ui-sref="intro.hide">
+ <i class="fa fa-angle-right"></i>
+</div>

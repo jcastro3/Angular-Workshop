@@ -1,0 +1,44 @@
+<div class="circle-btn-left" ui-sref="intro.databinding">
+  <i class="fa fa-angle-left"></i>
+</div>
+
+     <h2 >Repeat [ng-repeat]</h2>
+
+     <div class="pure-g">
+         <div class="pure-u-1-2">
+             <h6>Same value array</h6>
+
+             <ul>
+
+               <li ng-repeat="speak in hodor track by $index">
+                 {{ speak }}
+               </li>
+
+             </ul>
+         </div>
+         <div class="pure-u-1-2">
+             <h6>Array of objects</h6>
+             <table class="pure-table pure-table-bordered">
+                 <thead>
+                    <th>id</th>
+                    <th>name</th>
+                    <th>gender</th>
+                 </thead>
+                <tbody>
+                    <tr ng-repeat="person in people">
+                        <td>{{$index}}</td>
+                        <td>{{person.name}}</td>
+                        <td>{{person.gender}}</td>
+                    </tr>
+                </tbody>
+
+             </table>
+
+         </div>
+
+     </div>
+
+
+<div class="circle-btn-right" ui-sref="intro.filters">
+ <i class="fa fa-angle-right"></i>
+</div>

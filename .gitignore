@@ -1,0 +1,9 @@
+#NS Angular-Workshop
+
+# Untracked files:
+    bower_components/
+    node_modules/
+    public/vendor/
+
+# Ignore IntelliJ settings files
+    /.idea

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Angular 101 Workshop</title>
+        <link rel="icon" type="image/png" href="assets/images/favicon.ico" sizes="16x16">
+        <meta charset="utf-8">
+
+        <!-- Bower Components -->
+        <link rel="stylesheet" href="vendor/pure/pure-min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+
+
+    </head>
+    <body ng-app="app" >
+
+        <!-- NAV BAR  -->
+        <div class="pure-menu pure-menu-horizontal pure-menu--bg-red">
+            <a ui-sref="welcome" class="pure-menu-heading">
+                <img class="angular-logo" src="http://lauterry.github.io/slides-prez-angular/img/angularjs.png" alt="">
+101 Workshop</a>
+            <ul class="pure-menu-list">
+                <li class="pure-menu-item"><a ui-sref="welcome"  ui-sref-active="active" class="pure-menu-link" >Welcome</a></li>
+                <li class="pure-menu-item"><a ui-sref="intro.part1" ui-sref-active="active" class="pure-menu-link" >Intro</a></li>
+                <li class="pure-menu-item"><a ui-sref="directives.syntax"   ui-sref-active="directives" class="pure-menu-link">Directives</a></li>
+            </ul>
+        </div>
+        
+        <!-- MAIN VIEW -->
+        <main class="main-container">
+            <ui-view></ui-view>
+        </main>
+
+
+        <!--SCRIPTS-->
+        <script src="vendor/angular/angular.min.js"></script>
+        <script src="vendor/angular-ui-router/release/angular-ui-router.min.js"></script>
+
+        <!-- Stylesheets -->
+        <link rel="stylesheet" href="assets/css/app.css">
+
+        <!-- Workshop Routing -->
+        <script src="app/app.js"></script>
+
+        <!-- Workshop Controllers -->
+        <script src="app/components/welcome/WelcomeCtrl.js"></script>
+        <script src="app/components/intro/IntroCtrl.js"></script>
+        <script src="app/components/intro/examples/databinding/DataBindingCtrl.js"></script>
+        <script src="app/components/intro/examples/repeat/RepeatCtrl.js"></script>
+        <script src="app/components/intro/examples/filters/FiltersCtrl.js"></script>
+        <script src="app/components/intro/examples/hide/HideCtrl.js"></script>
+        <script src="app/components/forms/FormsCtrl.js"></script>
+        <script src="app/components/directives/IsolateScopeCtrl.js"></script>
+
+        <!-- Workshop Services -->
+        <script src="app/common/services/PeopleService.js"></script>
+
+
+        <!-- Workshop Directives -->
+        <script src="app/common/directives/isolate_scope/IsolateScope.js"></script>
+
+
+    </body>
+</html>
