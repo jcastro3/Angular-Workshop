@@ -4,13 +4,13 @@ Nearsoft angular workshop, intro to angular.
 
 
 # Part 1. Quick application intro
-### Built in Directives, Data binding, & Filters
+#### Built in Directives, Data binding, & Filters
 1. Open [JS Bin](http://jsbin.com/).
 2. Copy this [Gist] (https://gist.github.com/jcastro3/301d4c29fb0582a9a79e).
 
 
 # Part 2.  Workshop
-### Requirements
+#### Requirements
 1. Text editor or IDE or your choice
 2. Have [Node](https://nodejs.org/) installed.
 3. Clone this repo.
